@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  .form
+    form(action="/api/zip-code-by-address")
+        label(for="state") Selecione seu estado: 
+        br
+        select(name="state")
+            option(value="AC") Acre – AC
+            option(value="AL") Alagoas – AL
+            option(value="AP") Amapá – AP
+            option(value="AM") Amazonas – AM
+            option(value="BA") Bahia – BA
+            option(value="CE") Ceará – CE
+            option(value="DF") Distrito Federal – DF
+            option(value="ES") Espírito Santo – ES
+            option(value="GO") Goiás – GO
+            option(value="MA") Maranhão – MA
+            option(value="MT") Mato Grosso – MT
+            option(value="MS") Mato Grosso do Sul – MS
+            option(value="PA") Minas Gerais – MG
+            option(value="PA") Pará – PA
+            option(value="PB") Paraíba – PB
+            option(value="PR") Paraná – PR
+            option(value="PE") Pernambuco – PE
+            option(value="PI") Piauí – PI
+            option(value="RJ") Rio de Janeiro – RJ
+            option(value="RN") Rio Grande do Norte – RN
+            option(value="RS") Rio Grande do Sul – RS
+            option(value="RO") Rondônia – RO
+            option(value="RR") Roraima – RR
+            option(value="SC") Santa Catarina – SC
+            option(value="SP") São Paulo – SP
+            option(value="SE") Sergipe – SE
+            option(value="TO") Tocantins – TO
+        br
+        br
+        label(for="city") Digite sua cidade: 
+        br
+        input(type="text", name="city")
+        br
+        br
+        label(for="place") Digite sua Rua: 
+        br
+        input(type="text", name="place")
+        br
+        br
+        button(type="submit") Descubra seu CEP 

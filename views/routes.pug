@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  h2 Links HTML:
+  a(href="/address-by-zip-code")  Descubra seu endereço a partir do seu CEP
+  br
+  a(href="/zip-code-by-address")  Descubra seu CEP a partir do seu endereço
+  h2 Links API:
+  a(href="/api/address-by-zip-code?cep=60841477")  /api/address-by-zip-code
+  br
+  a(href="/api/zip-code-by-address?state=CE&city=Fortaleza&place=Travessa Elisiario")  /api/zip-code-by-address

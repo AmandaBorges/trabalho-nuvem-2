@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .form
+    form(action="/api/address-by-zip-code")
+        label(for="cep") Digite seu CEP: 
+        br
+        input(type="number", name="cep")
+        br
+        br
+        button(type="submit") Descubra seu endereço 
