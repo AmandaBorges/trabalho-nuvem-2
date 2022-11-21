@@ -36,6 +36,22 @@ const productList = [
   }
 ];
 
-exports.index = (request, response)=> {
-  response.render("main",{productList, title:"LOJA BOKU NO HERO"});
+exports.index = (request, response) => {
+  response.render('main', { productList, title: 'LOJA BOKU NO HERO' });
+}
+
+exports.show = (request, response) => {
+  const findProduct = productList.find(function(product) {
+    return product.id == request.params.id;
+  });
+
+  response.render('product', { findProduct, title: 'LOJA BOKU NO HERO' });
+}
+
+exports.quantity = (request, response) => {
+  const findProduct = productList.find(function(product) {
+    return product.id == request.params.id;
+  });
+
+  response.render('productQuantity', { findProduct, title: 'LOJA BOKU NO HERO' });
 }

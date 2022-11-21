@@ -1,0 +1,8 @@
+extends layout 
+
+block content
+    <h1>#{findProduct.name}</h1>
+    <img src="#{findProduct.image}">
+    <h1>#{findProduct.price}</h1>
+    <p>#{findProduct.description}</p>
+    <a href="/main/quantity/#{findProduct.id}">COMPRAR</a>

@@ -1,0 +1,9 @@
+extends layout 
+
+block content
+    <h1>COLOQUE A QUANTIDADE DO PRODUTO</h1>
+    <p>Produto: #{findProduct.name}</p>
+    <form action='/amanda-routes'>
+      <input type='number' />
+      <input type='submit' value='Finalizar Compra'>  
+    </form>
