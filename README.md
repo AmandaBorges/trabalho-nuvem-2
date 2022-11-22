@@ -1,5 +1,4 @@
 # trabalho-nuvem-2
-
 ## Rodando o projeto
 - Baixe o node no link https://nodejs.org/en/download/
 - No git bash abra a pasta do seu workspace
