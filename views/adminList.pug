@@ -1,0 +1,14 @@
+
+<h1>Remover Produtos</h1>
+<ul>
+each  product in productList
+  <li>
+    <p>#{product.id}</p>
+    <h2>#{product.name}</h2>
+    <p>#{product.price}</p>
+    <form action="/admin/produto/deletar" method="post">
+      <input name="idP" type="hidden" value="#{product.id}">
+      <button type="submit">Deletar</button>
+    </form>
+  </li>
+</ul>

@@ -1,4 +1,4 @@
-const productList = [
+let productList = [
   {
     id: 1,
     name: "Izuku Midoriya (deku) Brush Style Bwfc - My Hero Academia - Banpresto",
@@ -82,5 +82,17 @@ exports.store = (request, response) => {
     image: imgP,
   };
   productList.push(produtoN);
+  response.redirect("/main");
+};
+
+exports.list = (request, response) => {
+  response.render("adminList", { productList });
+};
+
+exports.delete = (request, response) => {
+  let { idP } = request.body;
+
+  productList = productList.filter((product) => product.id != idP);
+
   response.redirect("/main");
 };
