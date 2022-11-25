@@ -1,24 +1,31 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
 
-const enderecoController = require('../controllers/enderecoContoller');
+//controlador Amanda
+const enderecoController = require("../controllers/enderecoContoller");
+
+// controlador Luiz Felipe
+const productController = require("../controllers/productController");
 
 /* GET home page. */
-router.get('/', enderecoController.home);
+router.get("/", enderecoController.home);
 
 /* GET home page. */
-router.get('/amanda-routes', enderecoController.routes);
+router.get("/amanda-routes", enderecoController.routes);
+
+//Get home page 2
+router.get("/felipe-routes", productController.routes);
 
 /* GET my address page. */
-router.get('/address-by-zip-code', enderecoController.addressByZipCode);
+router.get("/address-by-zip-code", enderecoController.addressByZipCode);
 
 /* GET my cep page. */
-router.get('/zip-code-by-address', enderecoController.zipCodeByAddress);
+router.get("/zip-code-by-address", enderecoController.zipCodeByAddress);
 
 /* GET my address by zip code json. */
-router.get('/api/address-by-zip-code', enderecoController.getZipCode);
+router.get("/api/address-by-zip-code", enderecoController.getZipCode);
 
 /* GET my zip code by adress json. */
-router.get('/api/zip-code-by-address', enderecoController.getAddress);
+router.get("/api/zip-code-by-address", enderecoController.getAddress);
 
 module.exports = router;

@@ -44,6 +44,10 @@ let productList = [
   },
 ];
 
+exports.routes = (request, response) => {
+  response.render("felipeRoutes", { title: "MENU INICIAL" });
+};
+
 //lista de todos os produtos
 exports.index = (request, response) => {
   response.render("main", { productList, title: "LOJA BOKU NO HERO" });
