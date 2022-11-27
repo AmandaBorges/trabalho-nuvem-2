@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 exports.home = (req, res, next) => {
-    res.render('index', { title: 'Trabalho Desenvolvimento de Software em Nuvem' });
+    res.render('home', { title: 'Trabalho Desenvolvimento de Software em Nuvem' });
 }
 
 exports.routes = (req, res, next) => {
