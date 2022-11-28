@@ -106,5 +106,9 @@ exports.categories = (req, res, next) => {
 }
 
 exports.products = (req, res, next) => {
-  res.render("main", { productList, title: "LOJA BOKU NO HERO" });
+  res.render("products", { productList, title: "LOJA BOKU NO HERO" });
+}
+
+exports.buyProduct = (req, res, next) => {
+  res.render("buyProduct", { productList, title: "LOJA BOKU NO HERO" });
 }

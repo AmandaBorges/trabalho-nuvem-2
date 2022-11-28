@@ -12,6 +12,9 @@ router.get('/categories', productController.categories);
 // GET products list
 router.get('/categories/products', productController.products);
 
+// GET buy product list
+router.get('/categories/products/:slug', productController.buyProduct);
+
 // GET individual product details
 router.get('/:id', productController.show);
 
