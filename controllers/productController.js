@@ -100,3 +100,11 @@ exports.delete = (request, response) => {
 
   response.redirect("/main");
 };
+
+exports.categories = (req, res, next) => {
+  res.render("categories");
+}
+
+exports.products = (req, res, next) => {
+  res.render("main", { productList, title: "LOJA BOKU NO HERO" });
+}

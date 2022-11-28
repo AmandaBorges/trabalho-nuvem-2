@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt">
+    include includes/head.pug
+    <body>
+        include includes/menu.pug 
+        <main>
+            <div class="container marketing">
+                <div class="card mb-3 card-category" data-slug="marvel">
+                    <img class="card-img-top" src="/images/ironred.png" alt="Card image cap" width="auto" height="auto" style="">
+                    <div class="card-body">
+                        <h5 class="card-title">Action Figures MCU</h5>
+                        <p class="card-text">As melhores figuras do Universo Marvel para você. Encontre seu personagem favorito.</p>
+                    </div>
+                </div>
+                <div class="card mb-3 card-category" data-slug="animes">
+                    <img class="card-img-top" src="/images/narutosasuke.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Action Figures Animes</h5>
+                        <p class="card-text">As melhores action figures com alta qualidade dos seus animes favoritos. Encontre seu personagem favorito.</p>
+                    </div>
+                </div>
+                <div class="card mb-3 card-category" data-slug="series">
+                    <img class="card-img-top" src="/images/bigbang.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Action Figures Series</h5>
+                        <p class="card-text">A melhores action figures das suas series favoritas. Encontre seu personagem colecionável!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        script(src="/javascripts/cardCategoryClick.js")
+    </body>
+</html>

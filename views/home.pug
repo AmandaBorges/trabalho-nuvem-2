@@ -1,162 +1,117 @@
 <!doctype html>
 <html lang="pt">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.104.2">
-    <title>Carousel Template · Bootstrap v5.2</title>
+include includes/head.pug  
+<body> 
+  include includes/menu.pug  
+  <main>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/demonslayer.webp", alt="demonslayer" width="100%" height="100%">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
-    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link href="/stylesheets/headers.css" rel="stylesheet">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1>Action Figures Animes</h1>
+              <p>As melhores action figures com alta qualidade dos seus animes favoritos.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/marvel.webp", alt="demonslayer" width="100%" height="100%">
 
-    
-    <link href="/stylesheets/carousel.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Geek Sertão</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Action Figures MCU.</h1>
+              <p>As melhores figuras do Universo Marvel para você.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/images/lostark.webp", alt="demonslayer" width="100%" height="100%">
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Action Figures Games</h1>
+              <p>Encontre Figurees do seu game favori com a gente.</p>
+              <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Categorias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link">Produtos</a>
-          </li>
-        </ul>
-      </div>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-  </nav>
-</header>
 
-<main>
-
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/images/demonslayer.webp", alt="demonslayer" width="100%" height="100%">
-
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Action Figures Animes</h1>
-            <p>As melhores action figures com alta qualidade dos seus animes favoritos.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
-          </div>
+    <div class="container marketing">
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">Naruto Hatake Kakashi</h2>
+          <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
+          <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
+          <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
+          <p class="lead"><strong>Valor:</strong> R$ 66,00</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Comprar</a></p>
+        </div>
+        <div class="col-md-5">
+          <img src="/images/kakashi.webp" width="500" height="500" alt="">
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="/images/marvel.webp", alt="demonslayer" width="100%" height="100%">
 
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Action Figures MCU.</h1>
-            <p>As melhores figuras do Universo Marvel para você.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
-          </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading fw-normal lh-1">Marvel bonecos vingadores, Homem-Aranha.</h2>
+          <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
+          <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
+          <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
+          <p class="lead"><strong>Valor:</strong> R$ 133,82</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Comprar</a></p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="/images/homem-aranha.webp" width="500" height="500" alt="">
         </div>
       </div>
-      <div class="carousel-item">
-        <img src="/images/lostark.webp", alt="demonslayer" width="100%" height="100%">
 
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Action Figures Games</h1>
-            <p>Encontre Figurees do seu game favori com a gente.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Saiba Mais</a></p>
-          </div>
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading fw-normal lh-1">The Walking Dead Rick Grimes</h2>
+          <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
+          <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
+          <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
+          <p class="lead"><strong>Valor:</strong> R$ 93,61</p>
+          <p><a class="btn btn-lg btn-primary" href="#">Comprar</a></p>
+        </div>
+        <div class="col-md-5">
+          <img src="/images/rick.webp" width="500" height="500" alt="">
         </div>
       </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-  <div class="container marketing">
-    <hr class="featurette-divider">
+      <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Naruto Hatake Kakashi</h2>
-        <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
-        <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
-        <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
-        <p class="lead"><strong>Valor:</strong> R$ 66,00</p>
-      </div>
-      <div class="col-md-5">
-        <img src="/images/kakashi.webp" width="500" height="500" alt="">
-      </div>
-    </div>
+      <!-- /END THE FEATURETTES -->
 
-    <hr class="featurette-divider">
+    </div><!-- /.container -->
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Marvel bonecos vingadores, Homem-Aranha.</h2>
-        <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
-        <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
-        <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
-        <p class="lead"><strong>Valor:</strong> R$ 133,82</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src="/images/homem-aranha.webp" width="500" height="500" alt="">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">The Walking Dead Rick Grimes</h2>
-        <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
-        <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
-        <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
-        <p class="lead"><strong>Valor:</strong> R$ 93,61</p>
-        <p><a class="btn btn-lg btn-primary" href="#">Comprar</a></p>
-      </div>
-      <div class="col-md-5">
-        <img src="/images/rick.webp" width="500" height="500" alt="">
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
-
-
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Voltar ao Topo</a></p>
-    <p>&copy; 2022 Company, Inc.
-  </footer>
-</main>
-
-
-<script src="/javascripts/bootstrap.bundle.min.js"></script>
-      
-  </body>
+    include includes/footer.pug  
+  </main>
+  
+  include includes/scripts.pug 
+</body>
 </html>
