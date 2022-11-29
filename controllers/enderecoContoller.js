@@ -1,7 +1,14 @@
 const axios = require('axios');
 
 exports.home = (req, res, next) => {
-    res.render('home', { title: 'Trabalho Desenvolvimento de Software em Nuvem' });
+    var products = require("../mocks/products.json");
+    var highlights = [];
+    products.forEach(function(item, index, arr) {
+      if(item.is_highlight) {
+        highlights.push(item);
+      }
+    });
+    res.render('home', { products: highlights });
 }
 
 exports.routes = (req, res, next) => {

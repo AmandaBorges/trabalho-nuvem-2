@@ -56,3 +56,11 @@
       .form-buy {
         margin: 100px;
       }
+
+      .form-row {
+        margin-bottom: 30px;
+      }
+
+      .form-adress {
+        text-align: center;
+      }

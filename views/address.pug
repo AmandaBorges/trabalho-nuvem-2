@@ -1,14 +1,19 @@
-extends layout
-
-block content
-  .form
-    form(action="/api/address-by-zip-code")
-        label(for="cep") Digite seu CEP: 
-        br
-        input(type="number", name="cep")
-        br
-        br
-        button(type="button", class="btn-get-address") Descubra seu endereço
-
-
-    script(src="/javascripts/scripts-address.js")
+<!doctype html>
+<html lang="pt">
+    include includes/head.pug
+    <body>
+        include includes/menu.pug 
+        <h1 style="text-align: center; margin-top:50px; margin-bottom:50px;">Descubra seu endereço</h1>
+        <main>
+          .form
+            form(class="form-adress" action="/api/address-by-zip-code")
+              label(for="cep") Digite seu CEP: 
+              br
+              input(type="number", name="cep")
+              br
+              br
+              button(type="button", class="btn-get-address btn btn-lg btn-primary") Descobrir        
+        </main>
+        script(src="/javascripts/scripts-address.js")
+    </body>
+</html>

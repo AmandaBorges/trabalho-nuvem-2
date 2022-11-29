@@ -3,7 +3,7 @@
     include includes/head.pug
     <body>
         include includes/menu.pug 
-        <h1 style="text-align: center; margin-top:50px; margin-bottom:50px;">Realizar Compra</h1>
+        <h1 style="text-align: center; margin-top:50px; margin-bottom:50px;">Realizar Compra: #{product.title}</h1>
         <form class="form-buy">
             <div class="row mb-3 text-center">
                 <div class="col-md-8 themed-grid-col">
@@ -11,19 +11,89 @@
                     .col-md-8
                     </div>
                     <div class="row">
-                        <div class="col-md-6 themed-grid-col">
+                        <div class="form-row col-md-6 themed-grid-col">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Nome Completo">
+                        </div>
+                        <div class="form-row col-md-6 themed-grid-col">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="CPF" maxlength="11">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-row col-md-6 themed-grid-col">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Celular">
+                        </div>
+                        <div class="form-row col-md-6 themed-grid-col">
                             <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                         </div>
-                        <div class="col-md-6 themed-grid-col">
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="row">
+                        <div class="form-row col-md-3 themed-grid-col">
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="CEP">
+                            <a href="/zip-code-by-address" target="_blank">Decubra seu cep</a>
+                        </div>
+                        <div class="form-row col-md-3 themed-grid-col">
+                            select(name="state", class="form-control")
+                                option(value="AC") Acre – AC
+                                option(value="AL") Alagoas – AL
+                                option(value="AP") Amapá – AP
+                                option(value="AM") Amazonas – AM
+                                option(value="BA") Bahia – BA
+                                option(value="CE") Ceará – CE
+                                option(value="DF") Distrito Federal – DF
+                                option(value="ES") Espírito Santo – ES
+                                option(value="GO") Goiás – GO
+                                option(value="MA") Maranhão – MA
+                                option(value="MT") Mato Grosso – MT
+                                option(value="MS") Mato Grosso do Sul – MS
+                                option(value="PA") Minas Gerais – MG
+                                option(value="PA") Pará – PA
+                                option(value="PB") Paraíba – PB
+                                option(value="PR") Paraná – PR
+                                option(value="PE") Pernambuco – PE
+                                option(value="PI") Piauí – PI
+                                option(value="RJ") Rio de Janeiro – RJ
+                                option(value="RN") Rio Grande do Norte – RN
+                                option(value="RS") Rio Grande do Sul – RS
+                                option(value="RO") Rondônia – RO
+                                option(value="RR") Roraima – RR
+                                option(value="SC") Santa Catarina – SC
+                                option(value="SP") São Paulo – SP
+                                option(value="SE") Sergipe – SE
+                                option(value="TO") Tocantins – TO
+                            <a href="/address-by-zip-code" target="_blank">Decubra seu endereço</a>
+                        </div>
+                        <div class="form-row col-md-3 themed-grid-col">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Cidade">
+                        </div>
+                        <div class="form-row col-md-3 themed-grid-col">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Rua">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-row col-md-4 themed-grid-col">
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="Número">
+                        </div>
+                        <div class="form-row col-md-4 themed-grid-col">
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Complemento">
+                        </div>
+                        <div class="form-row col-md-4 themed-grid-col">
+                            <input type="number" class="form-control" id="inputEmail4" placeholder="Quantidade">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 themed-grid-col">
+                            <p class="lead"><strong>Valor Total:</strong> #{product.value}</p>
+                        </div>
+                        <div class="col-md-12 themed-grid-col">
+                            <p><button class="btn btn-lg btn-primary" id="finish-buy">Comprar</button></p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 themed-grid-col">
-                    <img src="/images/kakashi.webp" width="500" height="500" alt="">
+                    <img src="#{product.image}" width="500" height="500" alt="">
                 </div>
             </div>
         </form>
-        
+        script(src="/javascripts/script-buy.js")
 </body>
 </html>

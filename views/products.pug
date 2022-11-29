@@ -5,52 +5,37 @@
         include includes/menu.pug 
         <h1 style="text-align: center; margin-top:50px;">Lista de Produtos</h1>
         <div class="container marketing">
-          <hr class="featurette-divider">
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading fw-normal lh-1">Naruto Hatake Kakashi</h2>
-              <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
-              <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
-              <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
-              <p class="lead"><strong>Valor:</strong> R$ 66,00</p>
-              <p><a class="btn btn-lg btn-primary" href="/categories/products/kakashi">Comprar</a></p>
-            </div>
-            <div class="col-md-5">
-              <img src="/images/kakashi.webp" width="500" height="500" alt="">
-            </div>
-          </div>
-
-          <hr class="featurette-divider">
-
-          <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-              <h2 class="featurette-heading fw-normal lh-1">Marvel bonecos vingadores, Homem-Aranha.</h2>
-              <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
-              <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
-              <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
-              <p class="lead"><strong>Valor:</strong> R$ 133,82</p>
-              <p><a class="btn btn-lg btn-primary" href="/categories/products/home-aranha">Comprar</a></p>
-            </div>
-            <div class="col-md-5 order-md-1">
-              <img src="/images/homem-aranha.webp" width="500" height="500" alt="">
-            </div>
-          </div>
-
-          <hr class="featurette-divider">
-
-          <div class="row featurette">
-            <div class="col-md-7">
-              <h2 class="featurette-heading fw-normal lh-1">The Walking Dead Rick Grimes</h2>
-              <p class="lead"><strong>Material da mercadoria:</strong> Pvc em pvc</p>
-              <p class="lead"><strong>Tamanho:</strong> Aproximadamente 25cm</p>
-              <p class="lead"><strong>Pacote:</strong> Embalado na caixa</p>
-              <p class="lead"><strong>Valor:</strong> R$ 93,61</p>
-              <p><a class="btn btn-lg btn-primary" href="/categories/products/rick">Comprar</a></p>
-            </div>
-            <div class="col-md-5">
-              <img src="/images/rick.webp" width="500" height="500" alt="">
-            </div>
-          </div>
+          each product, index in products
+            if index%2 == 0
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                <div class="col-md-7">
+                  <h2 class="featurette-heading fw-normal lh-1">#{product.title}</h2>
+                  <p class="lead"><strong>Material da mercadoria:</strong> #{product.material}</p>
+                  <p class="lead"><strong>Tamanho:</strong> #{product.size}</p>
+                  <p class="lead"><strong>Pacote:</strong> #{product.packing}</p>
+                  <p class="lead"><strong>Valor:</strong> #{product.value}</p>
+                  <p><a class="btn btn-lg btn-primary" href="/categories/products/#{product.slug}">Comprar</a></p>
+                </div>
+                <div class="col-md-5">
+                  <img src="#{product.image}" width="500" height="500" alt="">
+                </div>
+              </div>
+            else 
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                  <h2 class="featurette-heading fw-normal lh-1">#{product.title}</h2>
+                  <p class="lead"><strong>Material da mercadoria:</strong> #{product.material}</p>
+                  <p class="lead"><strong>Tamanho:</strong> #{product.size}</p>
+                  <p class="lead"><strong>Pacote:</strong> #{product.packing}</p>
+                  <p class="lead"><strong>Valor:</strong> #{product.value}</p>
+                  <p><a class="btn btn-lg btn-primary" href="/categories/products/#{product.slug}">Comprar</a></p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                  <img src="#{product.image}" width="500" height="500" alt="">
+                </div>
+              </div>
 
           <hr class="featurette-divider">
 

@@ -105,10 +105,30 @@ exports.categories = (req, res, next) => {
   res.render("categories");
 }
 
-exports.products = (req, res, next) => {
-  res.render("products", { productList, title: "LOJA BOKU NO HERO" });
+exports.products = (req, res, next) => {  
+  console.log(req.query.category);
+  var products = require("../mocks/products.json");
+  if(req.query.category != undefined){
+    var filterCagory = [];
+    products.forEach(function(item, index, arr) {
+      if(item.category == req.query.category) {
+        filterCagory.push(item);
+      }
+    });
+    res.render("products", { products: filterCagory});
+  }
+
+  res.render("products", { products: products});
 }
 
 exports.buyProduct = (req, res, next) => {
-  res.render("buyProduct", { productList, title: "LOJA BOKU NO HERO" });
+  var products = require("../mocks/products.json");
+  var product = null;
+  products.forEach(function(item, index, arr) {
+    if(item.slug == req.params.slug) {
+      product = item
+    }
+  });
+
+  res.render("buyProduct", { product: product});
 }
