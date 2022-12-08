@@ -10,12 +10,6 @@ const productController = require("../controllers/productController");
 /* GET home page. */
 router.get("/", enderecoController.home);
 
-/* GET home page. */
-router.get("/amanda-routes", enderecoController.routes);
-
-//Get home page 2
-router.get("/felipe-routes", productController.routes);
-
 /* GET my address page. */
 router.get("/address-by-zip-code", enderecoController.addressByZipCode);
 

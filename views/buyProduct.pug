@@ -77,12 +77,12 @@
                             <input type="text" class="form-control" id="inputEmail4" placeholder="Complemento">
                         </div>
                         <div class="form-row col-md-4 themed-grid-col">
-                            <input type="number" class="form-control" id="inputEmail4" placeholder="Quantidade">
+                            <input type="number" class="form-control" id="inputQtt" placeholder="Quantidade" data-value="#{product.value}">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 themed-grid-col">
-                            <p class="lead"><strong>Valor Total:</strong> #{product.value}</p>
+                        <div class="col-md-12 themed-grid-col" id="divValorTotal">
+                            <p class="lead" id="total-value"><strong>Valor Total:</strong> #{product.value}</p>
                         </div>
                         <div class="col-md-12 themed-grid-col">
                             <p><button class="btn btn-lg btn-primary" id="finish-buy">Comprar</button></p>
