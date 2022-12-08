@@ -1,14 +1,50 @@
+<!doctype html>
+<html lang="pt">
+    include includes/head.pug
+    <body>
+        <h1 style="text-align: center; margin-top:50px;">Lista de Produtos</h1>
+        <div class="container marketing">
+          <div class="row featurette">
+            <a type="button" class="btn btn-lg btn-primary" href="/admin/products/create">Adicionar Produto</a>
+          </div>
+          each product, index in products
+            if index%2 == 0
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                <div class="col-md-7">
+                  <h2 class="featurette-heading fw-normal lh-1">#{product.title}</h2>
+                  <p class="lead"><strong>Material da mercadoria:</strong> #{product.material}</p>
+                  <p class="lead"><strong>Tamanho:</strong> #{product.size}</p>
+                  <p class="lead"><strong>Pacote:</strong> #{product.packing}</p>
+                  <p class="lead"><strong>Valor:</strong> #{product.value}</p>
+                  <p><a class="btn btn-lg btn-warning" href="/categories/products/#{product.slug}">Editar</a></p>
+                  <p><a class="btn btn-lg btn-danger btn-delete-product" data-slug="#{product.slug}">Deletar</a></p>
+                </div>
+                <div class="col-md-5">
+                  <img src="#{product.image}" width="500" height="500" alt="">
+                </div>
+              </div>
+            else 
+              <hr class="featurette-divider">
+              <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                  <h2 class="featurette-heading fw-normal lh-1">#{product.title}</h2>
+                  <p class="lead"><strong>Material da mercadoria:</strong> #{product.material}</p>
+                  <p class="lead"><strong>Tamanho:</strong> #{product.size}</p>
+                  <p class="lead"><strong>Pacote:</strong> #{product.packing}</p>
+                  <p class="lead"><strong>Valor:</strong> #{product.value}</p>
+                  <p><a class="btn btn-lg btn-warning" href="/categories/products/#{product.slug}">Editar</a></p>
+                  <p><a class="btn btn-lg btn-danger btn-delete-product" data-slug="#{product.slug}">Deletar</a></p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                  <img src="#{product.image}" width="500" height="500" alt="">
+                </div>
+              </div>
 
-<h1>Remover Produtos</h1>
-<ul>
-each  product in productList
-  <li>
-    <p>#{product.id}</p>
-    <h2>#{product.name}</h2>
-    <p>#{product.price}</p>
-    <form action="/admin/produto/deletar" method="post">
-      <input name="idP" type="hidden" value="#{product.id}">
-      <button type="submit">Deletar</button>
-    </form>
-  </li>
-</ul>
+          <hr class="featurette-divider">
+
+          <!-- /END THE FEATURETTES -->
+</div><!-- /.container -->
+script(src="/javascripts/btn-product-delete.js")
+</body>
+</html>

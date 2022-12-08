@@ -2,17 +2,21 @@ let express = require("express");
 let router = express.Router();
 
 const productController = require("../controllers/productController");
+const userController = require('../controllers/userController')
+
+/* GET users listing. */
+router.get('/login', userController.login);
 
 // GET product create form
-router.get("/produto/criar", productController.createP);
+router.get("/products/create", productController.create);
 
 // POST create product
-router.post("/produto/criar", productController.store);
+router.post("/products/create", productController.store);
 
 // GET product list
-router.get("/produto", productController.list);
+router.get("/products", productController.list);
 
-// POST delete product
-router.post("/produto/deletar", productController.delete);
+// DELETE delete product
+router.delete("/products/:slug/delete", productController.delete);
 
 module.exports = router;
