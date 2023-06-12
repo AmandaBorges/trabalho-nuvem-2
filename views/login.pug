@@ -6,6 +6,7 @@ html
         link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous")
         link(href="/stylesheets/login.css")
         script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous")
+        script(src="https://unpkg.com/axios/dist/axios.min.js")
     body
         section(class="vh-100")
             div(class="container-fluid")
@@ -19,17 +20,17 @@ html
                                 <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form2Example18" class="form-control form-control-lg" />
+                                    <input type="email" id="userNameLogin" class="form-control form-control-lg" />
                                     <label class="form-label" for="form2Example18">Email</label>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example28" class="form-control form-control-lg" />
+                                    <input type="password" id="passwordLogin" class="form-control form-control-lg" />
                                     <label class="form-label" for="form2Example28">Password</label>
                                 </div>
 
                                 <div class="pt-1 mb-4">
-                                    <a class="btn btn-info btn-lg btn-block" type="button" href="/admin/products">Entrar</a>
+                                    <button id="btn-login-form" onclick="sendLogin()" class="btn btn-info btn-lg btn-block" type="button">Entrar</button>
                                 </div>
 
                             </form>
@@ -40,3 +41,4 @@ html
                     div(class="col-sm-6 px-0 d-none d-sm-block")
                         img(src="https://i.pinimg.com/736x/a1/aa/7f/a1aa7f1a124b359730a44a5f6be0a9fc.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;")
                 </div>
+                script(src="/javascripts/login.js")
