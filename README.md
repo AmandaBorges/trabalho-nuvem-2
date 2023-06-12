@@ -9,6 +9,9 @@
 - npm install
 - npm start
 - acesse http://localhost:3000
+- Na home Acessar botão superior Login Administrador
+- Logar com email:amandasilvaborges2@gmail.com/ senha: 123@Bcde
+- Nessa área é possível realizar toda a gestão de usuários
 - E mãos a obra =)
 
 ![alt text][image]
